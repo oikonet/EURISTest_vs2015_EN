@@ -5,18 +5,47 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                
-                <h2>@ViewBag.Message</h2>
 
-                <p>The points listed below illustrate the features to be implemented in the project. For the success of the test, develop at least the first point.</p>
+                <h2>@ViewBag.Message</h2>
 
             </hgroup>
 
         </div>
     </section>
 }
-<ol class="round">
 
-    <h2>The instructions for completing the test are stored in the README file present in the solution.</h2>
 
+
+<h2>Comments on check list of requirements</h2>
+
+<ul>
+    <li>
+        MVC: Used RedirectToAction for product selection.
+    </li>
+    <li>
+        EF: Done with association. This is in contrast with the classes definition in documentation.
+        <br />From all the project descriptions it's clear that there is a many to many relationship between PRODUCT and CATALOG.
+        <br />So if it's defined "Product – list of products." in Catalog, then it should be defined "Catalog – list of catalogs." in Product.
+        <br />Or better it sould be nothing since the many to many relationship is defined with the third table... (automatically managed by EF with the association wizard)
+    </li>
+    <li>
+        Linq: An example of particular Linq is in ProductManager.cs inside function GetRemainingProducts.
+        <br />There are many way to accomplish this task, this is server-side, extensible with search pagine and many functions,
+        <br />it has the advantage to keep the logic on the server,
+        <br />and it's completely stateless.
+    </li>
+</ul>
+
+<h2>Use cases accomplished</h2>
+
+<ol>
+    <li>
+        Product CRUD done. The coupled catalogs are visible inside details link.
+    </li>
+    <li>
+        Catalog CRUD done. The coupled products are visible inside details link.
+    </li>
+    <li>
+        The products selection is inside the edit view of Catalog.
+    </li>
 </ol>
